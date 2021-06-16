@@ -1,0 +1,6 @@
+Out of 100000 rolls, 15 landed as all ones
+Out of 100000 rolls, 11 landed as all twos
+Out of 100000 rolls, 15 landed as all threes
+Out of 100000 rolls, 15 landed as all fours
+Out of 100000 rolls, 18 landed as all fives
+Out of 100000 rolls, 10 landed as all sixes

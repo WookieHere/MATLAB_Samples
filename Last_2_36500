@@ -1,0 +1,36 @@
+.data
+I: .word 0
+size: .word 10
+highest: .word 0
+lowest: .word 0
+arr: .word 12, -1, 8, 0, 6, 85, -74, 23, 99, -30
+
+.text
+
+main:
+lw $t0, I
+lw $t1, arr
+lw $t3, size
+li $t4, 0 #offset
+loop:
+lw $t1, arr($t4)
+
+lw $t2, highest
+ble $t1, $t2, not_higher
+#is higher
+sw $t1, highest
+not_higher:
+
+lw $t2, lowest
+bge $t1, $t2, not_lower
+#is lower
+sw $t1, lowest
+not_lower:
+
+add $t0, $t0, 1
+sw $t0, I
+add $t4, $t4, 4 #move forward 1 word
+
+bne $t0, $t3, loop
+lw $t6, highest
+lw $t7, lowest
